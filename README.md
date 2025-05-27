@@ -1,1 +1,1 @@
-# gpu-ray-tracer
+WEEK 1 tasks completed.

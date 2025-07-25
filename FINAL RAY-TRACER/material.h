@@ -45,7 +45,7 @@ class metal : public material {
     bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered)
     const override {
         Vec3 reflected = reflect(r_in.direction(), rec.normal);
-        reflected = unit_vector(reflected) + (fuzz * random_unit_vector());
+        reflected = unit_vector(reflected) + (random_unit_vector()*fuzz);
 
         scattered = ray(rec.p, reflected);
         attenuation = albedo;
